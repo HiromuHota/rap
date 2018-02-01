@@ -267,12 +267,12 @@ public class IDialogConstants {
     /**
      * The label for finish buttons.
      */
-    public static String FINISH_LABEL = JFaceResources.getString(IDialogLabelKeys.NEXT_LABEL_KEY);
+    public static String FINISH_LABEL = JFaceResources.getString(IDialogLabelKeys.FINISH_LABEL_KEY);
 
     /**
      * The label for help buttons.
      */
-    public static String HELP_LABEL = JFaceResources.getString(IDialogLabelKeys.FINISH_LABEL_KEY);
+    public static String HELP_LABEL = JFaceResources.getString(IDialogLabelKeys.HELP_LABEL_KEY);
 
     // Margins, spacings, and sizes
     /**
