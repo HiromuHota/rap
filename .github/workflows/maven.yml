@@ -29,7 +29,7 @@ jobs:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         automatic_release_tag: "webspoon/nightly"
         prerelease: false
-        title: "Auto-build of $GITHUB_REF ($GITHUB_SHA) by GitHub Actions on $(date +'%F %T %Z')."
+        title: "Auto-build of ${{ github.ref }} (${{ github.sha }}) by GitHub Actions on ${{ date +'%F %T %Z' }}."
         files: |
           bundles/org.eclipse.rap.rwt/target/org.eclipse.rap.rwt-*.jar
           bundles/org.eclipse.rap.jface/target/org.eclipse.rap.jface-*.jar
