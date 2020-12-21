@@ -27,7 +27,7 @@ jobs:
     - uses: marvinpinto/action-automatic-releases@v1.1.0
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "nightly"
+        automatic_release_tag: "webspoon/nightly"
         prerelease: false
         title: "Auto-build of $GITHUB_REF ($GITHUB_SHA) by GitHub Actions on $(date +'%F %T %Z')."
         files: |
