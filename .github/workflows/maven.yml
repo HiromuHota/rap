@@ -25,6 +25,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package
     - uses: marvinpinto/action-automatic-releases@latest
+      if: github.ref == 'refs/heads/webspoon-3.12.0'
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         automatic_release_tag: "webspoon/nightly"
