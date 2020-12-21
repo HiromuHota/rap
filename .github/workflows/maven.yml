@@ -24,7 +24,7 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package
-    - uses: marvinpinto/action-automatic-releases@v1.1.0
+    - uses: marvinpinto/action-automatic-releases@latest
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         automatic_release_tag: "webspoon/nightly"
