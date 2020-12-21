@@ -5,9 +5,9 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: webspoon-.*
+    branches: webspoon-*
   pull_request:
-    branches: webspoon-.*
+    branches: webspoon-*
 
 jobs:
   build:
