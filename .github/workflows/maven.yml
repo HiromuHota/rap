@@ -24,15 +24,12 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package
-    - name: Get current datetime
-      id: date
-      run: echo "name=$(date +'%F %T %Z')" >> $GITHUB_ENV
     - uses: marvinpinto/action-automatic-releases@latest
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         automatic_release_tag: "webspoon/nightly"
         prerelease: false
-        title: "Auto-build of ${{ github.ref }} (${{ github.sha }}) by GitHub Actions on ${{ steps.date.outputs.date }}."
+        title: "Auto-build of ${{ github.ref }} by GitHub Actions."
         files: |
           bundles/org.eclipse.rap.rwt/target/org.eclipse.rap.rwt-*.jar
           bundles/org.eclipse.rap.jface/target/org.eclipse.rap.jface-*.jar
