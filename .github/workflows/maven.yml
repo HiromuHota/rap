@@ -36,4 +36,11 @@ jobs:
       run: mvn -B deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Repository Dispatch
+      # if: startsWith(github.ref, 'refs/heads/hop-')
+      uses: peter-evans/repository-dispatch@v1
+      with:
+        token: ${{ secrets.REPO_ACCESS_TOKEN }}
+        repository: HiromuHota/incubator-hop
+        event-type: rap-updated
 
